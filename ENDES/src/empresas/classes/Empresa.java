@@ -9,7 +9,7 @@ import empresas.interfaces.IEmpresa;
 public class Empresa implements IEmpresa{
 	private final static int BONUS_DEF=0;
 
-	public CEO ceo;
+	public JEFE ceo;
 	public String nombre;
 	public Empleado[] empleados;
 	public int maxempleados;
@@ -98,20 +98,20 @@ public class Empresa implements IEmpresa{
 	}
 	/**	
 		metodo que asigna un jefe a la empresa
-		@param c objeto de tipo ceo que sera dado de alta en la empresa
-		@param bonus cantidad que se sumara al objeto tipo ceo.
+		@param c objeto de tipo jefe que sera dado de alta en la empresa
+		@param bonus cantidad que se sumara al objeto tipo jefe.
 
 	*/
-	public void contrataCEO(CEO c, int salario,int bonus){
+	public void contrataCEO(JEFE c, int salario,int bonus){
 		c.salario = salario;
 		c.empresa=this;
 		c.bonus = bonus;
 		this.ceo = c;
 	}
-	public void contrataCEO(CEO c, int bonus){
+	public void contrataCEO(JEFE c, int bonus){
 		this.contrataCEO(c,SALARIO_DEF,bonus);
 	}
-	public void contrataCEO(CEO c){
+	public void contrataCEO(JEFE c){
 		this.contrataCEO(c,SALARIO_DEF,BONUS_DEF);	
 	}
 	/**
