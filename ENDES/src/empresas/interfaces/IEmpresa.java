@@ -1,7 +1,7 @@
 package empresas.interfaces;
 
 import empresas.classes.Empleado;
-import empresas.classes.CEO;
+import empresas.classes.JEFE;
 
 public interface IEmpresa{
 
@@ -12,9 +12,9 @@ public interface IEmpresa{
 	boolean contrataEmp(Empleado e, int salario);
 	boolean contrataEmp(Empleado e);
 	boolean despideEmp(String nombre);
-	void contrataCEO(CEO c, int salario, int bonus);
-	void contrataCEO(CEO c, int bonus);
-	void contrataCEO(CEO c);
+	void contrataCEO(JEFE c, int salario, int bonus);
+	void contrataCEO(JEFE c, int bonus);
+	void contrataCEO(JEFE c);
 
 
 

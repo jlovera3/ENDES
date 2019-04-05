@@ -34,15 +34,16 @@ public class Empleado implements IEmpleado{
 	}
 	/**
 		metodo que dice si dos empleados trabaja en la misma empresa
-		@param otro objeto de tipo empleado que se obtendra si son de la misma empresa.
+		@param persona objeto de tipo empleado que se obtendra si son de la misma empresa.
 		@return devuelve true si los dos objeto son colegas.
 	*/
 
 
-	public boolean somosColegas(Empleado otro){
+        @Override
+	public boolean Compañeros(Empleado persona){
 		boolean amigos = false;
-		if(this.empresa!=null&&otro.empresa!=null){
-			if(this.empresa.nombre.equals(otro.empresa.nombre)){
+		if(this.empresa!=null&&persona.empresa!=null){
+			if(this.empresa.nombre.equals(persona.empresa.nombre)){
 				amigos = true;
 			}
 		}
@@ -51,10 +52,11 @@ public class Empleado implements IEmpleado{
 
 	/**
 		dice quien es el jefe actual de la empresa del empleado.
-		@return devuelve un objeto de tipo CEO
+		@return devuelve un objeto de tipo JEFE
 	*/
-	public CEO quienEsMijefe(){
-		CEO miceo=null;
+        @Override
+	public JEFE quienEsMijefe(){
+		JEFE miceo=null;
 		if(this.empresa!=null){
 			miceo=this.empresa.ceo;
 		}
@@ -65,6 +67,7 @@ public class Empleado implements IEmpleado{
 		@return un string con el nombre de la empresa;
 	*/
 
+        @Override
 	public String trabaja(){
 
 		return "Estoy currando en "+
@@ -73,7 +76,9 @@ public class Empleado implements IEmpleado{
 	}
 	/**
 		devuelve el sueldo del empleado
+     * @return 
 	*/
+        @Override
 	public int cobra(){
 
 		return this.salario;

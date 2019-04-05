@@ -1,20 +1,20 @@
 package empresas.classes;
-public class CEO extends Empleado{
+public class JEFE extends Empleado{
 
 	private static final int BONUS_DEF = 250;
  
 	public int bonus;
 
-	public CEO(){
+	public JEFE(){
 		this(NOMBRE_DEF,SALARIO_DEF,BONUS_DEF);
 	}
 
-	public CEO(String nombre){
+	public JEFE(String nombre){
 		this(nombre,SALARIO_DEF,BONUS_DEF);
 	}
 	
 
-	public CEO(String nombre, int salario,int bonus){
+	public JEFE(String nombre, int salario,int bonus){
 		super(nombre, salario);
 		//this.nombre=nombre;
 		//this.salario=salario;
@@ -38,8 +38,8 @@ public class CEO extends Empleado{
 	public boolean equals(Object obj){
 
 		boolean iguales = false;
-    if(obj instanceof CEO){
-			CEO tmp = (CEO) obj;
+    if(obj instanceof JEFE){
+			JEFE tmp = (JEFE) obj;
 			if(super.equals(obj) && this.bonus == tmp.bonus){
 			   	iguales = true;
 			}
