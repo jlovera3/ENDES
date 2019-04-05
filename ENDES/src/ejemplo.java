@@ -1,5 +1,5 @@
 import empresas.classes.Empresa;
-import empresas.classes.CEO;
+import empresas.classes.JEFE;
 import empresas.classes.Empleado;
 //Esto es un comentario3333
 public class ejemplo{
@@ -17,8 +17,8 @@ public class ejemplo{
 		Empleado e5=new Empleado("Julio");
 		Empleado e6=new Empleado("Maria");
 
-		CEO c1=new CEO("Carlos");
-		CEO c2=new CEO("Eva");
+		JEFE c1=new JEFE("Carlos");
+		JEFE c2=new JEFE("Eva");
 
 
 		emp1.contrataEmp(e1);
@@ -39,12 +39,12 @@ public class ejemplo{
 		emp1.contrataCEO(c1);
 		emp2.contrataCEO(c2,500);
 
-		System.out.println(emp1); //debe mostrar toda la info de la empresa, includo los empleados y CEO y cuanto cobra cada uno
+		System.out.println(emp1); //debe mostrar toda la info de la empresa, includo los empleados y JEFE y cuanto cobra cada uno
 		System.out.println(emp2);
 
 		System.out.println("El jefe de "+e2.nombre+" es "+e2.quienEsMijefe().nombre);
 
-		if(e3.somosColegas(e4)){
+		if(e3.Compañeros(e4)){
 			System.out.println(e3.nombre+" es colega de "+e4.nombre);
 		}
 
