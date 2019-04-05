@@ -1,7 +1,7 @@
 import empresas.classes.Empresa;
 import empresas.classes.JEFE;
 import empresas.classes.Empleado;
-//Esto es un comentario3333
+
 public class ejemplo{
 	public static void main(String[] args){
 
@@ -39,7 +39,7 @@ public class ejemplo{
 		emp1.contrataCEO(c1);
 		emp2.contrataCEO(c2,500);
 
-		System.out.println(emp1); //debe mostrar toda la info de la empresa, includo los empleados y JEFE y cuanto cobra cada uno
+		System.out.println(emp1); 
 		System.out.println(emp2);
 
 		System.out.println("El jefe de "+e2.nombre+" es "+e2.quienEsMijefe().nombre);

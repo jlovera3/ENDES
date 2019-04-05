@@ -32,13 +32,32 @@ public class Empleado implements IEmpleado{
 		this(nombre, SALARIO_DEF);
 
 	}
+        //ENCAPSULAMIENTO DE LOS ATRIBUTOS DE LA CLASE:
+        public void setNombre(String nuevonombre){
+            this.nombre = nuevonombre;
+        }
+        public void setSalario(int nuevosalario ){
+            this.salario = nuevosalario;
+        }
+        public void setEmpresa(Empresa nuevaempresa){
+            this.empresa = nuevaempresa;
+        }
+        public String getNombre(){
+            return this.nombre;
+        }
+        public int getSalario(){
+            return this.salario;
+        }
+        public Empresa getEmpresa(){
+            return this.empresa;
+        }
 	/**
 		metodo que dice si dos empleados trabaja en la misma empresa
 		@param persona objeto de tipo empleado que se obtendra si son de la misma empresa.
 		@return devuelve true si los dos objeto son colegas.
 	*/
 
-
+        
         @Override
 	public boolean Compañeros(Empleado persona){
 		boolean amigos = false;

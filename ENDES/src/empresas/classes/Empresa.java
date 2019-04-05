@@ -3,7 +3,7 @@ import empresas.interfaces.IEmpresa;
 /**
 	Empresa.class
 	permite crear objetos de tipo empleados.
-	@author Antonio Martinez Diaz
+	@author ENDES SPRINT 4
 	@version 0.1
 */
 public class Empresa implements IEmpresa{
@@ -19,7 +19,7 @@ public class Empresa implements IEmpresa{
 		Empresa.NEmpresas++;
 		this.nombre = nombre;
 		this.maxempleados=maxempleados;
-		this.empleados = new Empleado[maxempleados];
+		Empleados();
 	}
 
 	 public Empresa(String nombre){
@@ -129,23 +129,19 @@ public class Empresa implements IEmpresa{
 
 		return listaemp.toString();
 	}
-
-
-
-
-
-
+        /**
+         * Nombre: Empleados
+         * Descripción: Método que crea y instancia una lista de empleados dependiendo del tamaño que se le pase al constructor.
+         */
+        private void Empleados(){
+            
+            this.empleados = new Empleado[maxempleados];
+        
+        }
+        @Override
 	public String toString(){
 
 		return "Nombre empresa :"+this.nombre+" Empleados: "+listaEmpleados()+" CEO: "+this.ceo.nombre;
 	} 
-
-
-
-
-
-
-
-
 
 }
