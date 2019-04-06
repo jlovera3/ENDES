@@ -39,6 +39,7 @@ public class Empresa implements IEmpresa{
 
 	*/
 
+        @Override
 	public boolean contrataEmp(Empleado e, int salario){
 		boolean contratado = false;
 		if(e!=null){
@@ -78,6 +79,7 @@ public class Empresa implements IEmpresa{
 
 	*/
 
+        @Override
 	public boolean despideEmp(String nombre){
 
 		boolean despide = false;
@@ -99,20 +101,26 @@ public class Empresa implements IEmpresa{
 	/**	
 		metodo que asigna un jefe a la empresa
 		@param c objeto de tipo jefe que sera dado de alta en la empresa
+                @param salario
 		@param bonus cantidad que se sumara al objeto tipo jefe.
+                @param titulo
 
 	*/
-	public void contrataCEO(JEFE c, int salario,int bonus){
+        @Override
+	public void contrataCEO(JEFE c, int salario,int bonus,String titulo){
 		c.salario = salario;
 		c.empresa=this;
 		c.bonus = bonus;
+                c.titulo = titulo;
 		this.ceo = c;
 	}
+        @Override
 	public void contrataCEO(JEFE c, int bonus){
-		this.contrataCEO(c,SALARIO_DEF,bonus);
+		this.contrataCEO(c,SALARIO_DEF,bonus,c.titulo);
 	}
+        @Override
 	public void contrataCEO(JEFE c){
-		this.contrataCEO(c,SALARIO_DEF,BONUS_DEF);	
+		this.contrataCEO(c,SALARIO_DEF,BONUS_DEF,c.titulo);	
 	}
 	/**
 		metodo que lista empleados.
