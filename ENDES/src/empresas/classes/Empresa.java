@@ -19,7 +19,7 @@ public class Empresa implements IEmpresa{
 		Empresa.NEmpresas++;
 		this.nombre = nombre;
 		this.maxempleados=maxempleados;
-		Empleados();
+		Empleados(maxempleados);
 	}
 
 	 public Empresa(String nombre){
@@ -141,7 +141,7 @@ public class Empresa implements IEmpresa{
          * Nombre: Empleados
          * Descripción: Método que crea y instancia una lista de empleados dependiendo del tamaño que se le pase al constructor.
          */
-        private void Empleados(){
+        private void Empleados(int maxempleados){
             
             this.empleados = new Empleado[maxempleados];
         
